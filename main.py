@@ -7,12 +7,12 @@ import sys
 #  CONSTANTS
 # ──────────────────────────────────────────────────────────────
 WIDTH, HEIGHT = 480, 640
-FPS = 60
+FPS = 120
 GRAVITY = 0.45
 FLAP_STRENGTH = -8.5
 PIPE_SPEED = 3
-PIPE_GAP = 160
-PIPE_INTERVAL = 1600   # ms between pipes
+PIPE_GAP = 180
+PIPE_INTERVAL = 2000   # ms between pipes
 
 # Palette
 SKY_TOP    = (100, 181, 246)
@@ -421,7 +421,7 @@ def draw_score(surface, score, font_big, font_small, game_over=False,
         # Title screen
         title_surf = font_big.render("FLAPPY BIRD", True, WHITE)
         sub_surf   = font_small.render("Press SPACE or TAP to flap!", True, WHITE)
-        cg_surf    = font_small.render("[ CG Practical Project ]", True, (255, 230, 100))
+        cg_surf    = font_small.render("[ Chase That High Score]", True, (255, 230, 100))
         surface.blit(title_surf,
                      (WIDTH//2 - title_surf.get_width()//2, HEIGHT//2 - 100))
         surface.blit(sub_surf,
@@ -500,7 +500,7 @@ def draw_stars(surface, stars):
 def main():
     pygame.init()
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
-    pygame.display.set_caption("Flappy Bird — CG Practical Project")
+    pygame.display.set_caption("Flappy Bird")
     clock  = pygame.time.Clock()
 
     try:
