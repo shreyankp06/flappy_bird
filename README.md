@@ -65,6 +65,8 @@ algorithms implemented from scratch (no pygame.draw for shapes).
 ### HOW TO RUN
   pip install pygame
   python flappy_bird_cg.py
+  version recommended: pygame 2.6.1 (SDL 2.28.4, Python 3.13.5)
+  I tried running this on vs code having those ver.
 
 ### CONTROLS
   SPACE / UP / W / Mouse Click — Flap
